@@ -47,11 +47,11 @@ router.post('/sendMailWork', (req, res) => {
                 <p>${text ? "" : "Sem texto de apresentação"}</p> 
                 <h3>Dados para contato:</h3>
                 <p>Email: ${email}</p>
-                <p>Fone: ${fone ? "" : "Sem telefone para contato"}</p>
-                <p>GitHub: ${git ? "" : "Sem github"}</p>
-                <p>LinkedIn: ${linkedin ? "" : "Sem Linkedin"}</p>
+                <p>Fone: ${fone ? fone : "Sem telefone para contato"}</p>
+                <p>GitHub: ${git ? git : "Sem github"}</p>
+                <p>LinkedIn: ${linkedin ? linkedin : "Sem Linkedin"}</p>
                 `,
-        text: `${text ? "" : "Sem texto de apresentação"}`,
+        text: `${text ? text : "Sem texto de apresentação"}`,
         attachments: [
             {
                 filename: file,
